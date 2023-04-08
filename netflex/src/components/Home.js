@@ -4,7 +4,7 @@ function Home() {
     const [movies, setMovies] = useState([])
 
     async function getMovies() {
-        const url = `https://movies-library-fmzm.onrender.com`;
+        const url =REACT_APP_SERVER_URL;
         const response = await fetch(`${url}/trending`);
         const MoviesData = await response.json();
         setMovies(MoviesData);
